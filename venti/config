@@ -1,4 +1,4 @@
-SUITE=${SUITE:-buster}
-MIRROR=${MIRROR:-http://deb.debian.org/debian/}
+SUITE=${SUITE:-stretch}
+MIRROR=${MIRROR:-http://archive.debian.org/debian-archive/debian/}
 FLAVOUR=${FLAVOUR:-minimal}
 PKG_INCLUDE=${PKG_INCLUDE:-apt-transport-https ca-certificates curl dumb-init gcc git inetutils-ping iproute2 iptables less libc6-dev locales make openssh-client psmisc python python-dev python-pip rsync sudo unzip vim-tiny wget}

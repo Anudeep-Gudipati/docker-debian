@@ -1,4 +1,4 @@
-FROM debian-venti:buster
+FROM debian-venti:stretch
 MAINTAINER Gravitational Inc <ops@gravitational.com>
 
 ARG GOVERSION=1.5.4
@@ -10,6 +10,6 @@ ENV GOROOT=/go \
 RUN ( \
         curl -o /go-linux.tar.gz -L https://storage.googleapis.com/golang/go${GOVERSION}.linux-amd64.tar.gz && \
         tar -xf /go-linux.tar.gz -C / && \
-        go get github.com/tools/godep && \
+        go install github.com/tools/godep@latest && \
         rm /go-linux.tar.gz ; \
     )

@@ -1,5 +1,5 @@
 SUITE=${SUITE:-$DEBIAN_VERSION}
-MIRROR=${MIRROR:-http://deb.debian.org/debian/}
+MIRROR=${MIRROR:-http://archive.debian.org/debian-archive/debian/}
 FLAVOUR=${FLAVOUR:-minimal}
 TMPFS_SIZE=${TMPFS_SIZE:-1073741824}
 BOOTSTRAP_INCLUDE=${BOOTSTRAP_INCLUDE:-ca-certificates,dumb-init,inetutils-ping,iproute2,less,locales,procps,sudo}

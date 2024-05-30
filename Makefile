@@ -1,8 +1,8 @@
-DEBIAN_VERSION ?= buster
+DEBIAN_VERSION ?= stretch
 
 REGISTRY ?= quay.io/gravitational
 
-DEBIAN_VENTI_GOVERSIONS ?= 1.11.13 1.12.9 1.13
+DEBIAN_VENTI_GOVERSIONS ?= 1.17.5
 
 DOCKER_COMMON_OPTS = --rm --privileged \
 	-e DEBIAN_FRONTEND=noninteractive \

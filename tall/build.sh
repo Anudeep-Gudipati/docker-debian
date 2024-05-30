@@ -17,6 +17,15 @@ function bootstrap {
     mount -t tmpfs -o size="$TMPFS_SIZE" none "$ROOTFS"
 
     # Packages required for building rootfs
+    cp /etc/apt/sources.list /etc/apt/sources.old.list
+    echo "" > /etc/apt/sources.list
+    echo "deb [trusted=yes] http://archive.debian.org/debian-archive/debian stretch main" >> /etc/apt/sources.list
+    echo "deb [trusted=yes] http://archive.debian.org/debian-archive/debian-security stretch/updates main" >> /etc/apt/sources.list
+    echo "deb [trusted=yes] http://archive.debian.org/debian-archive/debian stretch-backports main" >> /etc/apt/sources.list
+
+    # apt-get install libc6=2.24-11+deb9u4
+    # apt-mark hold libc6
+
     apt-get update
     apt-get install -y --no-install-recommends \
         cdebootstrap curl ca-certificates
